@@ -64,6 +64,11 @@ export default function Withdrawal() {
   }, [token]);
 
   const handleConfirmClick = async () => {
+    if (amount < 10000) {
+      toast.error("Minimum amount for withdrawal is ₦10,000");
+      return;
+    }
+
     if (userData.totalBalance < amount) {
       toast.error("Insufficient balance");
       return;
