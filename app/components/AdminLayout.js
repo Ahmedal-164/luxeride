@@ -3,15 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import {
-  FaHome,
-  FaCoins,
-  FaHistory,
-  FaUser,
-  FaChartLine,
-  FaCar,
-  FaDollarSign,
-} from "react-icons/fa"; // Updated to more appropriate icons
+import { FaHome, FaCoins, FaUser } from "react-icons/fa"; // Updated to more appropriate icons
 import logo from "../images/logo.png";
 import user from "../images/usericon.jpeg";
 
@@ -76,7 +68,7 @@ export default function DashboardLayout({ children }) {
               <span>Overview</span>
             </span>
             <span
-              onClick={() => router.push("/portfolio")}
+              onClick={() => router.push("/cc/admin/adminUsers")}
               className={`block hover:bg-gold p-2 rounded cursor-pointer flex items-center space-x-2 ${
                 currentPath === "/portfolio" ? "bg-orange text-white" : ""
               }`}
@@ -85,7 +77,7 @@ export default function DashboardLayout({ children }) {
               <span>All Users</span>
             </span>
             <span
-              onClick={() => router.push("/car")}
+              onClick={() => router.push("/cc/admin/adminTransaction")}
               className={`block hover:bg-gold p-2 rounded cursor-pointer flex items-center space-x-2 ${
                 currentPath === "/carInvestments" ? "bg-orange text-white" : ""
               }`}
